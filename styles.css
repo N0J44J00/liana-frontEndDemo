@@ -1,15 +1,144 @@
-main {
-   background-color: white;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+   --font-main:'Open Sans', sans-serif;
 }
 
+html {
+ font-family: var(--font-main);
+
+}
+
+body {
+   background-color: red;
+   margin: 0;
+}
+
+/* img {
+   width: 100%;
+} */
+
+.container {
+   background-color: white;
+   max-width: 1400px;
+   /* height: 100vh; */
+   margin: auto;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 170px 80vh 40vh 40vh 40vh 30vh;
+   grid-template-areas: 
+   "header"
+   "main"
+   "latestNews"
+   "references"
+   "newsletter"
+   "footer";
+   gap: 0.2rem;
+
+}
+
+
+
 header {
+   grid-area: header;
    background-color: rgb(76, 137, 48);
 }
 
-.latestNews {
+main {
+   grid-area: main;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1.5fr 1fr 1fr;
+   grid-template-areas: 
+   "mainBanner mainBanner mainBanner"
+   "companyBanner productsBanner contactUsBanner"
+   "clients employees dailyUsers"
+   ;
+}
+
+.parallaxWrapper {
+   background-image: url(/img/banner-main-test.jpg);
+   height: 100%;
+   width: 100%;
+   overflow-y: hidden;
+   overflow-x: hidden;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position-y: top;
+
+
+}
+
+.title {
+   font-size: 3rem;
+   font-weight: 600;
+   text-shadow: 0 0 5px black;;
+   color: white;
+
+}
+
+#latestNews {
+   grid-area: latestNews;
    background-color: rgb(236,238,239);
 }
 
+#references {
+   background-color: white;
+   grid-area: references;
+}
+
+#newsletter {
+   background-color: white;
+   grid-area: newsletter;
+}
+
+#mainBanner {
+   grid-area: mainBanner;
+}
+
+#companyBanner {
+   grid-area: companyBanner;
+}
+
+#productsBanner {
+   grid-area: productsBanner;
+}
+
+#contactUsBanner {
+   grid-area: contactUsBanner;
+}
+
+#clients {
+   grid-area: clients;
+}
+
+#employees {
+   grid-area: employees;
+}
+
+#dailyUsers {
+   grid-area: dailyUsers;
+}
+
 footer {
+   grid-area: footer;
    background-color: black;
+   color: white;
+}
+
+@media only screen and (max-width: 550px) {
+   .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 120vh 60vh 60vh 50vh 30vh;
+      grid-template-areas: 
+      "header"
+      "main"
+      "latestNews"
+      "references"
+      "newsletter"
+      "footer";
+      gap: 0.1rem;
+   }
 }
