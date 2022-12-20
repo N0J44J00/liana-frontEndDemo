@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="author" content="Joona Oja">
    <link rel="stylesheet" href="./styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
 </head>
 <body>
    <div class="container">
-      <header>
+      <header id="desktopHeader">
          <div class="headerTop">
             <ul class="headerTopContent">
                <li>
@@ -43,6 +44,21 @@
             </ul>
          </nav>
       </header>
+
+      <header id="mobileHeader">
+         <div class="headerTopMobile">
+            <a href="">News</a>
+            <a href="">Intranet</a>
+         </div>
+         <div class="headerBottomMobile">
+            <a href="#"><img src="/img/image-lianaHeader.png" alt=""></a>
+            <a href="">Company</a>
+            <a href="">Products</a>
+            <a href="">Contact Us</a>
+            <a href="#" class="icon"><i class="fa fa-bars"></i></a>
+         </div>
+      </header>
+
       <main>
          <section id="mainBanner" class="parallax">
             <div class="title">
