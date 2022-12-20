@@ -14,7 +14,26 @@
 <body>
    <div class="container">
       <header>
-         <nav>navbar</nav>
+         <div class="headerTop">
+            <a href="#">News</a>
+            <a href="#">Intranet</a>
+            <select name="languageSelector" id="language">
+               <option value="English">English</option>
+               <option value="Finnish">Finnish</option>
+            </select>
+         </div>
+         <nav class="headerBottom">
+            <ul class="navLeft">
+               <li><a href="#"><img src="/img/image-lianaHeader.png" alt="Liana Technologies Home Page link"></a></li>
+               <li><a href="#">Company</a></li>
+               <li><a href="#">Products</a></li>
+               <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="navRight">
+               <li><input type="text" placeholder="Search..."></li>
+               <li><button type="submit">Search</button></li>
+            </ul>
+         </nav>
       </header>
       <main>
          <section id="mainBanner" class="parallax">
