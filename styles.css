@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 :root{
-   --font-main:'Open Sans', sans-serif;
+   --font-family:'Open Sans', sans-serif;
 }
 
 html {
- font-family: var(--font-main);
+ font-family: var(--font-family);
 
 }
 
@@ -14,18 +14,13 @@ body {
    margin: 0;
 }
 
-/* img {
-   width: 100%;
-} */
-
 .container {
    background-color: white;
    max-width: 1400px;
-   /* height: 100vh; */
    margin: auto;
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 170px 80vh 40vh 40vh 40vh 30vh;
+   grid-template-rows: 170px 920px 350px 650px 275px 270px;
    grid-template-areas: 
    "header"
    "main"
@@ -33,22 +28,18 @@ body {
    "references"
    "newsletter"
    "footer";
-   gap: 0.2rem;
-
 }
-
-
 
 header {
    grid-area: header;
-   background-color: rgb(76, 137, 48);
+   background-color: #4c8930;
 }
 
 main {
    grid-area: main;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1.5fr 1fr 1fr;
+   grid-template-rows: 420px 1fr 1fr;
    grid-template-areas: 
    "mainBanner mainBanner mainBanner"
    "companyBanner productsBanner contactUsBanner"
@@ -56,27 +47,45 @@ main {
    ;
 }
 
-.parallaxWrapper {
-   background-image: url(/img/banner-main-test.jpg);
-   height: 100%;
-   width: 100%;
-   overflow-y: hidden;
-   overflow-x: hidden;
+.parallax {
+   position: relative;
    background-attachment: fixed;
-   background-position: center;
    background-repeat: no-repeat;
-   background-size: contain;
-   background-position-y: top;
-
-
+   background-image: url(/img/banner-main.jpg);
+   background-size: 1400px auto;
+   background-position: center top;
 }
 
 .title {
-   font-size: 3rem;
-   font-weight: 600;
+   position: absolute;
+   left: 0%;
+   top: 25%;
+   width: 100%;
+   text-align: center;
    text-shadow: 0 0 5px black;;
    color: white;
+}
 
+button {
+   background-color:  #4c8930;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   font-family: var(--font-family);
+   font-size: 18px;
+   margin: 1em;
+}
+
+button:hover {
+   transition: .1s ease-in-out;
+   background-color:  #63b13f;
+}
+
+h1 {
+   font-size: 3.5rem;
+   font-weight: 300;
+   margin: 0;
 }
 
 #latestNews {
@@ -96,6 +105,7 @@ main {
 
 #mainBanner {
    grid-area: mainBanner;
+   /* max-width: 1400px; */
 }
 
 #companyBanner {
@@ -128,10 +138,34 @@ footer {
    color: white;
 }
 
-@media only screen and (max-width: 550px) {
+/* Mobile Layout, Portrait */
+@media only screen and (max-width: 500px) {
+   .container {
+   grid-template-columns: 1fr;
+   grid-template-rows: 100px 200vh 60vh 60vh 50vh 30vh;
+}
+/* FIXME: adjust grid so that it works when nested: main->SECTION->div */
+   main {
+   grid-area: main;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 80vh 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-areas: 
+   "mainBanner"
+   "companyBanner"
+   "productsBanner"
+   "contactUsBanner"
+   "clients"
+   "employees"
+   "dailyUsers"
+   ;
+}
+}
+/* Mobile Layout, Landscape */
+@media only screen and (max-width: 900px) and ( max-height: 500px) {
    .container{
       grid-template-columns: 1fr;
-      grid-template-rows: 100px 120vh 60vh 60vh 50vh 30vh;
+      grid-template-rows: 100px 180vh 60vh 60vh 50vh 30vh;
       grid-template-areas: 
       "header"
       "main"
@@ -141,4 +175,26 @@ footer {
       "footer";
       gap: 0.1rem;
    }
+
+   main {
+      grid-template-rows: 70vh 1fr 1fr;
+   }
+
+   .parallax {
+      background-position: center top;
+      background-size: cover;
+   }
+
+   .title {
+    height: auto;
+    top: 15%;
+   }
+}
+/* Desktop Layout, Larger Screens */
+@media only screen and (min-width: 1400px) {
+   .parallax {
+      background-size: 1400px auto;
+      background-position: center top;
+   }
+
 }
