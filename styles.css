@@ -12,6 +12,7 @@ html {
 body {
    background-color: red;
    margin: 0;
+   font-size: 1.1rem;
 }
 
 .container {
@@ -73,6 +74,15 @@ section {
    grid-area: mainBanner;
 }
 
+.title h1 {
+   margin-top: 0.2em;
+   margin: 0.2em 10px 0 10px;
+}
+
+.title button {
+   margin-top: 1em;
+}
+
 #companyBanner {
    grid-area: companyBanner;
    width: 100%;
@@ -119,7 +129,7 @@ section {
    grid-area: latestNews;
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 50px 1fr;
+   grid-template-rows: 100px 1fr;
    grid-template-areas: 
    "referencesTitle"
    "referencesContent"
@@ -156,11 +166,13 @@ section {
    grid-area: references;
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 50px 1fr;
+   grid-template-rows: 100px 1fr;
    grid-template-areas: 
    "referencesTitle"
    "referencesContent"
    ;
+   width: 100%;
+   border-bottom: 1px gray solid;
 }
 
 #referencesTitle {
@@ -172,17 +184,19 @@ section {
    display: flex;
    flex-direction: row;
    align-items: stretch;
-   width: 100%;
+   width: 80%;
    height: 100%;
    margin: auto;
+
 }
 
 #referencesContent div {
    display: flex;
    width: 100%;
-   height: 100%;
-   align-self: stretch;
-   align-items: center;
+   height: 80%;
+   margin: 5px;
+   /* align-self: stretch;
+   align-items: center; */
    background-color: aquamarine;
 
    border: black 1px solid;
@@ -191,6 +205,40 @@ section {
 #newsletter {
    background-color: white;
    grid-area: newsletter;
+   display: inline-flex;
+   flex-direction: column;
+   float: none;
+   margin-top: 2rem;
+}
+
+#newsletter > * {
+   display: inline-block;
+   float: none;
+   margin: 10px auto 10px auto;
+}
+
+input {
+   padding: 10px;
+   border-radius: 5px;
+   font-size: 18px;
+   margin: 0;
+   width: 50%
+   ;
+}
+
+.input {
+   width: 80%;
+   display: flex;
+   /* justify-content: center;
+   align-items: center; */
+   text-align: center;
+   /* margin: 10px auto 10px auto; */
+}
+
+#newsletterText {
+   width: 40%;
+   text-align: center;
+   /* margin: 10px auto 10px auto; */
 }
 
 .parallax {
@@ -220,7 +268,7 @@ button {
    color: white;
    font-family: var(--font-family);
    font-size: 18px;
-   margin: 1em;
+   margin: 0em;
 }
 
 button:hover {
@@ -228,12 +276,19 @@ button:hover {
    background-color:  #63b13f;
 }
 
+
+
 h1 {
    font-size: 3.5rem;
    font-weight: 300;
    margin: 0;
 }
 
+h2 {
+   font-size: 2.1rem;
+   margin-top: 2rem;
+   text-align: center;
+}
 
 
 footer {
@@ -243,12 +298,12 @@ footer {
 }
 
 /* Mobile Layout, Portrait */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
    .container {
    grid-template-columns: 1fr;
-   grid-template-rows: 100px 200vh 60vh 60vh 50vh 30vh;
-}
-/* FIXME: adjust grid so that it works when nested: main->SECTION->div */
+   grid-template-rows: 100px 200vh 60vh 150vh 60vh 30vh;
+   }
+
    main {
    grid-area: main;
    display: grid;
@@ -269,17 +324,15 @@ footer {
    #newsContent,
    #referencesContent {
       flex-direction: column;
+      width: 90%;
    }
 
-    /* {
-      flex-direction: column;
-   } */
 }
 /* Mobile Layout, Landscape */
 @media only screen and (max-width: 900px) and ( max-height: 500px) {
    .container{
       grid-template-columns: 1fr;
-      grid-template-rows: 100px 180vh 80vh 100vh 50vh 30vh;
+      grid-template-rows: 80px 180vh 80vh 150vh 80vh 30vh;
       grid-template-areas: 
       "header"
       "main"
@@ -296,7 +349,28 @@ footer {
 
    #newsContent,
    #referencesContent {
-      flex-direction: column;
+      flex-direction: row;
+   }
+
+   #referencesContent {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   #referencesContent div {
+      flex:0 0 45%;
+      width: 50%;
+      height: 50%;
+      margin: auto;
+      /* margin-bottom: 100px; */
+
+      background-color: green;
+
+   
+      border: black 1px solid;
    }
 
    .parallax {
@@ -309,6 +383,34 @@ footer {
     top: 15%;
    }
 }
+
+@media only screen and (max-width: 1079px) and (min-width: 550px) {
+   #references {
+      padding-bottom: 20px;
+   }
+   
+   #referencesContent {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   #referencesContent div {
+      flex:0 0 45%;
+      width: 50%;
+      height: 50%;
+      margin: auto;
+
+      background-color: red;
+
+   
+      border: black 1px solid;
+   }
+
+}
+
 /* Desktop Layout, Larger Screens */
 @media only screen and (min-width: 1400px) {
    .parallax {
