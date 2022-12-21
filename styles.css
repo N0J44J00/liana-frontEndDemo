@@ -320,10 +320,10 @@ section {
    margin: auto;
 }
 
-#contentBanners {
+/* #contentBanners {
    display: flex;
    align-items: stretch;
-}
+} */
 
 .bannerImage {
    /* max-width: 100%;
@@ -334,14 +334,16 @@ section {
    
   
    /* margin: 2em; */
-   margin-top: 1em;
+   margin-top: 1.2em;
    /* display: block; */
   width: 100%;
-  height:80%;
+  height: 80%;
+  /* overflow: hidden; */
   /* width: auto; */
   /* height: auto; */
   object-fit: cover;
   border-radius: 5px;
+  object-position: bottom;
 }
 
 .centeredText {
@@ -380,32 +382,31 @@ section {
    position: relative;
    grid-area: companyBanner;
    width: 100%;
-   height: 100%;
-   background-color: yellow;
+   height: 95%;
+   /* background-color: yellow; */
    text-align: center;
-   padding: 1em;
-   
+   padding: .7em;
 }
 
 #productsBanner {
    position: relative;
    grid-area: productsBanner;
    width: 100%;
-   height: 100%;
-   background-color: aquamarine;
+   height: 95%;
+   /* background-color: aquamarine; */
    text-align: center;
-   padding: 1em;
-}
+   padding: .7em;
+   }
 
 #contactUsBanner {
    position: relative;
    grid-area: contactUsBanner;
    width: 100%;
-   height: 100%;
-   background-color: rosybrown;
+   height: 95%;
+   /* background-color: rosybrown; */
    text-align: center;
-   padding: 1em;
-}
+   padding: .7em;
+   }
 
 #clients {
    grid-area: clients;
@@ -426,6 +427,32 @@ section {
    width: 100%;
    height: 100%;
    background-color: aqua;
+}
+
+#clients,
+#employees,
+#dailyUsers {
+   text-align: center;
+}
+
+.numbersIcon {
+   float: left;
+   margin: 3em;
+   margin-right: 1.2em;
+   margin-left: 1em;
+   scale: 90%;
+}
+
+.numbersShowcase p {
+   text-align: left;
+   margin-left: 1em;
+}
+
+.animatedNumber {
+   font-size: 3.5rem;
+   font-weight: 300;
+   margin-top: 2rem;
+
 }
 
 #latestNews {
@@ -585,20 +612,12 @@ footer {
    color: white;
 }
 
-/* Mobile Layout, Portrait */
+/* MOBILE LAYOUT: PORTRAIT */
 @media only screen and (max-width: 550px) {
-
-   /* #mobileHeader {
-      display: flex;
-   }
-
-   #desktopHeader {
-      display: none;
-   } */
 
    .container {
    grid-template-columns: 1fr;
-   grid-template-rows: 100px 200vh 60vh 150vh 60vh 30vh;
+   grid-template-rows: 100px 210vh 60vh 150vh 60vh 30vh;
    }
 
    main {
@@ -622,6 +641,24 @@ footer {
    #referencesContent {
       flex-direction: column;
       width: 90%;
+   }
+
+   .bannerImage {
+     width: 100%;
+     max-height: 200px;
+     height: auto;
+     object-fit: cover;
+     border-radius: 10px;     
+   }
+
+   .centeredText {
+      top: 50%;
+      font-size: 1.6rem;
+      color: white;
+   }
+
+   #companyBanner, #productsBanner, #contactUsBanner {
+      padding: 0;
    }
 
 }
