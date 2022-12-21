@@ -49,14 +49,46 @@
          <div class="headerTopMobile">
             <a href="">News</a>
             <a href="">Intranet</a>
+            <select name="languageSelector" id="languageMobile">
+               <option value="English">In English</option>
+               <option value="Finnish">In Finnish</option>
+            </select>
          </div>
          <div class="headerBottomMobile">
-            <a href="#"><img src="/img/image-lianaHeader.png" alt=""></a>
-            <a href="">Company</a>
-            <a href="">Products</a>
-            <a href="">Contact Us</a>
-            <a href="#" class="icon"><i class="fa fa-bars"></i></a>
+            <a href="#"><img src="/img/image-lianaHeader.png" class="mobileHeaderImage" alt="Liana Technologies Home Page link"></a>
+            <div class="dropdownMenu">
+               <button onclick="mobileMenuDropdownToggle()" class="dropbtn"><i class="fa fa-bars"></i></button>
+               <div id="dropdownButton" class="dropdownContent">
+                  <div class="searchMobile">
+                     <input type="text" placeholder="Search...">
+                     <button class="searchIconSpan">Search</button>
+                  </div>
+                  <a href="#">Company</a>
+                  <a href="#">Products</a>
+                  <a href="#">Contact Us</a>
+               </div>
+             </div>
          </div>
+         
+
+         <!-- <div class="headerBottomMobile">
+            <a href="#"><img src="/img/image-lianaHeader.png" alt=""></a>
+            
+            
+            <div class="dropdown">
+               <button onclick="toggleMobileDropdown()" class="dropdownMenuIcon">
+                  <i class="fa fa-bars"></i></a>
+               </button>
+               <div id="dropdownMenuButton" class="dropdownMenuContent">
+                  <a href="">Company</a>
+                  <a href="">Products</a>
+                  <a href="">Contact Us</a>
+                  <input type="text" placeholder="Search">
+                  <button>Search</button>
+               </div>
+            </div>
+            
+         </div> -->
       </header>
 
       <main>
@@ -147,5 +179,6 @@
          footer
       </footer>
    </div>
+   <script src="scripts.js"></script>
 </body>
 </html>

@@ -21,6 +21,23 @@ body {
    font-size: 1.1rem;
 }
 
+
+button {
+   background-color:  #4c8930;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   font-family: var(--font-family);
+   font-size: 18px;
+   margin: 0em;
+}
+
+button:hover {
+   transition: .1s ease-in-out;
+   background-color:  #63b13f;
+}
+
 .container {
    background-color: white;
    max-width: 1400px;
@@ -146,32 +163,142 @@ a img {
 
 /* MOBILE NAVIGATION */
 
-/* .headerTopMobile {
+.headerTopMobile {
    height: 40px;
    width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.headerTopMobile a {
+   color: white;
+   text-decoration: none;
+   display: block;
+   padding: 8px 20px 20px 0px;
+   justify-content: right;
+}
+
+#languageMobile {
+   color: white;
+   background-color: #4c8930;
+   border: none;
+   font-size: 1rem;
+   /* padding: 5px 10px; */
+   margin: 0;
+   display:flex;
+
+}
+
+#languageMobile option {
+   border-radius: 0;
+   background-color: #4c8930;
+
 }
 
 .headerBottomMobile {
+   background-color: white;
    height: 60px;
    width: 100%;
-   background-color: white;
-   display: inline-flex;
+   z-index: 1;
+   display: flex;
    justify-content: space-between;
-
 }
 
-.headerBottomMobile img {
-   height: 50px;
-   margin: 5px;
+.mobileHeaderImage {
+   margin-top: 5px;
+   margin-left: 5px;
 }
 
-.icon {
-   float: none;
+.dropbtn {
+   background-color: white;
+   color: #4c8930;
+   /* padding: 10px; */
+   font-size: 2rem;
+   border: none;
+   cursor: pointer;
+   margin: 0;
+   /* padding: -0 0 5 5; */
+ }
+
+ .dropbtn i {
+   pointer-events: none;
+   padding: 0;
+   margin: 0;
+   vertical-align: middle;
+ }
+ 
+ .dropbtn:hover, .dropbtn:focus {
+   background-color: white;
+   color: #5ea83c;
+ }
+ 
+ .dropdownMenu {
+   position: relative;
    display: block;
-   font-size: 2.5em;
-   margin-right: 0.5em;
-   
-} */
+   float: right;
+ }
+
+ .dropdownMenu button {
+   padding-bottom: 0;
+   padding-top: 5px;
+   padding-right: 20px;
+   margin-bottom: 11px;
+ }
+ 
+ .dropdownContent {
+   display: none;
+   position: absolute;
+   background-color: white;
+   width: 100vw;
+   overflow: auto;
+   z-index: 1;
+   right: 0;
+   top: -1;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
+ }
+
+ .searchMobile {
+   display: block;
+   justify-content: center;
+   list-style: none;
+   text-align: center;
+   width: 100vw;
+ }
+
+ .searchMobile input {
+   align-items: center;
+   display: inline-block;
+   width: 40%;
+  margin: auto;
+  text-align: center;
+ }
+
+ .searchIconSpan {
+   display: inline-block;
+   background-color: white;
+   color: #5ea83c;
+   /* pointer-events: none; */
+   padding: 10px !important; 
+   margin: auto;
+   text-align: center;
+   color: white;
+   background-color: #4c8930;
+ }
+
+ 
+ .dropdownContent a {
+   color: black;
+   padding: 14px;
+   text-decoration: none;
+   display: block;
+   min-width: 100%;
+   text-align: center;
+ }
+ 
+ .dropdown a:hover {background-color: #ddd;}
+ 
+ .show {display: block;}
 
 main {
    grid-area: main;
@@ -397,21 +524,6 @@ input {
    color: white;
 }
 
-button {
-   background-color:  #4c8930;
-   padding: 10px;
-   border: none;
-   border-radius: 5px;
-   color: white;
-   font-family: var(--font-family);
-   font-size: 18px;
-   margin: 0em;
-}
-
-button:hover {
-   transition: .1s ease-in-out;
-   background-color:  #63b13f;
-}
 
 
 
@@ -475,19 +587,22 @@ footer {
 
 }
 /* Mobile Layout, Landscape */
-@media only screen and (max-width: 900px) and ( max-height: 500px) {
+/* @media only screen and (max-width: 1079px) and ( max-height: 500px) {
 
-   /* #mobileHeader {
+
+
+   .headerBottomMobile {
+      background-color: white;
+      height: 100px;
+      width: 100%;
+      z-index: 1;
       display: flex;
+      justify-content: space-between;
    }
-
-   #desktopHeader {
-      display: none;
-   } */
 
    .container{
       grid-template-columns: 1fr;
-      grid-template-rows: 80px 180vh 80vh 150vh 80vh 30vh;
+      grid-template-rows: 100px 250vh 80vh 150vh 80vh 30vh;
       grid-template-areas: 
       "header"
       "main"
@@ -520,7 +635,6 @@ footer {
       width: 50%;
       height: 50%;
       margin: auto;
-      /* margin-bottom: 100px; */
 
       background-color: green;
 
@@ -537,9 +651,71 @@ footer {
     height: auto;
     top: 15%;
    }
+} */
+
+/* MOBILE LANDSCAPE */
+
+@media only screen and (max-width: 954px) and (min-width: 550px) and (max-height: 600px) {
+   .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 200vh 80vh 90vh 90vh 30vh;
+      grid-template-areas: 
+      "header"
+      "main"
+      "latestNews"
+      "references"
+      "newsletter"
+      "footer";
+      
+   }
+   #referencesContent div {
+
+      background-color: pink;
+
+   
+      border: black 1px solid;
+   }
 }
 
-@media only screen and (max-width: 1079px) and (min-width: 550px) {
+
+   /* TABLETS */
+@media only screen and (max-width: 954px) and (min-width: 550px) and (min-height: 600px) {
+
+   .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 100vh 30vh 70vh 30vh 30vh;
+      grid-template-areas: 
+      "header"
+      "main"
+      "latestNews"
+      "references"
+      "newsletter"
+      "footer";
+      
+   }
+
+   main {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50vh 1fr 1fr;
+      grid-template-areas: 
+      "mainBanner"
+      "contentBanners"
+      "contentNumbers";
+      }
+   
+      section {
+         width: 100%;
+      }
+   
+      #contentBanners,
+      #contentNumbers,
+      #newsContent,
+      #referencesContent {
+         flex-direction: row;
+         width: 90%;
+      }
 
    #references {
       padding-bottom: 20px;
@@ -559,7 +735,7 @@ footer {
       height: 50%;
       margin: auto;
 
-      background-color: red;
+      background-color: purple;
 
    
       border: black 1px solid;
