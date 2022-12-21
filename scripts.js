@@ -1,4 +1,6 @@
 
+
+// toggle mobile nav menu dropdown
 function mobileMenuDropdownToggle() {
    document.getElementById("dropdownButton").classList.toggle("show");
  }
@@ -16,62 +18,54 @@ function mobileMenuDropdownToggle() {
      }
    }
  }
+ 
+// animated numbers when in view
+   const counters = document.querySelectorAll('.animatedNumber');
+   const counter = document.querySelector('#number1');
 
-//  animated Numbers
-const counters = document.querySelectorAll('.animatedNumber');
+function isInViewport(counter) {
+   const rect = counter.getBoundingClientRect();
+   // console.log(rect);
+   return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      
+  );
+}
 
-document.addEventListener('DOMContentLoaded', function(){
-   var counters = document.querySelector('#number1');
-})
-window.onscroll = function(){
-   var counters = document.querySelector('#number1');
-   //TOP
-   if(counters.getBoundingClientRect().top == 0){
+// checks if number showcases are in view to start count up animation
+var executedOnce = false;
+const checkVisibility = () => {
+   const counter = document.querySelector('#number3');
+   if(isInViewport(counter)) {
       startCountup();
-      removeEventListener;
-  }	
- }	
-
-
-
- //BOTTOM
-   // if(someElement.getBoundingClientRect().bottom <= 0){
-   //    console.log("TRIGGER: bottom of div reached.");
-   // alert('TRIGGER: bottom of div reached');
-   // }
-
-
-// Main function
-function startCountup() {
-   // var counters = document.querySelector('#number1');
-      for(let n of counters) {
-   const updateCount = () => {
-      const target = + n.getAttribute('data-target');
-      const count = + n.innerText;
-      const speed = 100000; // change animation speed here
-      const inc = target / speed; 
-      if(count < target) {
-         n.innerText = Math.ceil(count + inc);
-         setTimeout(updateCount, 1);
-      } else {
-         n.innerText = target;
-      }
+      executedOnce = true;
    }
-   updateCount();
+};
+document.addEventListener('scroll', checkVisibility);
+
+// Main function for number animation
+function startCountup() {
+   
+   if (executedOnce == false){
+      for(let n of counters) {
+         const updateCount = () => {
+            const target = + n.getAttribute('data-target');
+            const count = + n.innerText;
+            const speed = 100; // animation speed
+            const inc = target / speed; 
+            if(count < target) {
+               n.innerText = Math.ceil(count + inc);
+               setTimeout(updateCount, 1);
+            } else {
+               n.innerText = target;
+            }
+         }
+         updateCount();
+         }
+   } else {
+      return;
    }
 }
-// for(let n of counters) {
-//   const updateCount = () => {
-//     const target = + n.getAttribute('data-target');
-//     const count = + n.innerText;
-//     const speed = 10000000000; // change animation speed here
-//     const inc = target / speed; 
-//     if(count < target) {
-//       n.innerText = Math.ceil(count + inc);
-//       setTimeout(updateCount, 1);
-//     } else {
-//       n.innerText = target;
-//     }
-//   }
-//   updateCount();
-// }
