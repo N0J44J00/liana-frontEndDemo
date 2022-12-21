@@ -412,21 +412,21 @@ section {
    grid-area: clients;
    width: 100%;
    height: 100%;
-   background-color: lightcoral;
+   /* background-color: lightcoral; */
 }
 
 #employees {
    grid-area: employees;
    width: 100%;
    height: 100%;
-   background-color: azure;
+   /* background-color: azure; */
 }
 
 #dailyUsers {
    grid-area: dailyUsers;
    width: 100%;
    height: 100%;
-   background-color: aqua;
+   /* background-color: aqua; */
 }
 
 #clients,
@@ -613,18 +613,18 @@ footer {
 }
 
 /* MOBILE LAYOUT: PORTRAIT */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 549px) {
 
    .container {
    grid-template-columns: 1fr;
-   grid-template-rows: 100px 210vh 60vh 150vh 60vh 30vh;
+   grid-template-rows: 100px 240vh 60vh 150vh 60vh 30vh;
    }
 
    main {
    grid-area: main;
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 80vh 1fr 1fr;
+   grid-template-rows: 80vh 100vh 1fr;
    grid-template-areas: 
    "mainBanner"
    "contentBanners"
@@ -643,12 +643,39 @@ footer {
       width: 90%;
    }
 
+   #clients,
+   #employees,
+   #dailyUsers {
+      text-align: center;
+      height: 30%;
+   }
+
    .bannerImage {
      width: 100%;
      max-height: 200px;
      height: auto;
      object-fit: cover;
      border-radius: 10px;     
+   }
+   .numbersIcon {
+      float: left;
+      margin: 2em;
+      margin-right: 0;
+      margin-left: 5em;
+      scale: 70%;
+   }
+   
+   .numbersShowcase p {
+      text-align: left;
+      margin-left: 0;
+      font-size: 1rem;
+   }
+   
+   .animatedNumber {
+      font-size: 2.5rem !important;
+      font-weight: 300;
+      margin-top: 2rem;
+   
    }
 
    .centeredText {
@@ -661,73 +688,26 @@ footer {
       padding: 0;
    }
 
-}
-/* Mobile Layout, Landscape */
-/* @media only screen and (max-width: 1079px) and ( max-height: 500px) {
-
-
-
-   .headerBottomMobile {
-      background-color: white;
-      height: 100px;
-      width: 100%;
-      z-index: 1;
-      display: flex;
-      justify-content: space-between;
-   }
-
-   .container{
-      grid-template-columns: 1fr;
-      grid-template-rows: 100px 250vh 80vh 150vh 80vh 30vh;
-      grid-template-areas: 
-      "header"
-      "main"
-      "latestNews"
-      "references"
-      "newsletter"
-      "footer";
-      
-   }
-
-   main {
-      grid-template-rows: 70vh 1fr 1fr;
-   }
-
-   #newsContent,
-   #referencesContent {
-      flex-direction: row;
-   }
-
-   #referencesContent {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      margin: auto;
-
-   }
-
    #referencesContent div {
-      flex:0 0 45%;
-      width: 50%;
-      height: 50%;
-      margin: auto;
-
-      background-color: green;
-
-   
+      background-color: yellow;
       border: black 1px solid;
    }
 
-   .parallax {
-      background-position: center top;
-      background-size: cover;
+}
+/* Mobile Layout, Landscape */
+@media only screen and (max-width: 1110px) and ( min-width: 950px) {
+   .animatedNumber {
+      font-size: 1rem !important;
+      font-weight: 300;
+      margin-top: 2rem;
+   
+   }
+   #referencesContent div {
+      background-color: blue;
+      border: black 1px solid;
    }
 
-   .title {
-    height: auto;
-    top: 15%;
-   }
-} */
+}
 
 /* MOBILE LANDSCAPE */
 
@@ -744,11 +724,37 @@ footer {
       "footer";
       
    }
-   #referencesContent div {
+   #contentNumbers {
+      display: flex;
+      align-items: stretch;
+      width: 90%;
+      height: 90%;
+      margin: auto;
+   }
 
-      background-color: pink;
-
+   .numbersIcon {
+      float: left;
+      margin: 2em;
+      margin-right: 0;
+      margin-left: 1em;
+      scale: 50%;
+   }
    
+   .numbersShowcase p {
+      text-align: left;
+      margin-left: 0;
+      font-size: 1rem;
+   }
+   
+   .animatedNumber {
+      font-size: 2rem !important;
+      font-weight: 300;
+      margin-top: 2rem;
+   
+   }
+
+   #referencesContent div {
+      background-color: pink;
       border: black 1px solid;
    }
 }
@@ -774,7 +780,7 @@ footer {
       grid-area: main;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 50vh 1fr 1fr;
+      grid-template-rows: 50vh 1fr .5fr;
       grid-template-areas: 
       "mainBanner"
       "contentBanners"
@@ -791,6 +797,13 @@ footer {
       #referencesContent {
          flex-direction: row;
          width: 90%;
+      }
+
+      .animatedNumber {
+         font-size: 2rem !important;
+         font-weight: 300;
+         margin-top: 2rem;
+      
       }
 
    #references {
