@@ -357,6 +357,14 @@
   }
 }
 
+/* disable parallax on mobile screens. */
+
+@media only screen and (max-width:749px) {
+  .parallax {
+    background-attachment: inherit;
+  }
+}
+
 /* MEDIA QUERIES TO CHANGE BETWEEN HEADER NAV ELEMENTS */
 @media only screen and (max-width: 954px) {
   #mobileHeader {
