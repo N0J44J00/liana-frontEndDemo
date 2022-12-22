@@ -40,7 +40,76 @@ footer {
    grid-area: footer;
    background-color: black;
    color: white;
+   display: flex;
+   width: 100%;
 }
+
+.footerLeft {
+   /* float: left; */
+   display: flex;
+   width: 50%;
+   text-align: left;
+   margin: auto;
+   height: 100%;
+   padding-left: 6rem;
+}
+.footerLeftText {
+   margin-top: 3rem;
+}
+
+.footerLeftText h4 {
+   margin-bottom: 4rem;
+   margin-left: 0;
+   margin-top: 0;
+}
+
+.footerLeftButton {
+   margin-top: 3rem;
+   margin-bottom: 4rem;
+   margin-left: 2em;
+  position: relative;
+}
+
+.footerLeftButton button {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 120px;
+
+}
+
+.footerRight {
+   /* float: right; */
+   width: 50%;
+   text-align: right;
+   margin: auto;
+   height: 100%;
+   padding-right: 6rem;
+}
+
+.footerRight ul {
+   display: inline;
+   margin-bottom: 100px;
+}
+
+.footerRight ul li {
+   display: inline-block;
+   margin: 1rem;
+   margin-top: 3rem;
+}
+
+.footerRight a {
+   color: white;
+   text-decoration: none;
+}
+
+.socials {
+   margin: 5rem;
+   margin-right: 1em;
+}
+ .socials img {
+   margin-left: 5px;
+ }
 
 h3 {
    margin: 1em;
@@ -184,7 +253,7 @@ header {
 
    padding: 1em 1em 1em 0;
 }
-a img {
+.navLeft a img {
    height: 50px;
 }
 
