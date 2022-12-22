@@ -1,302 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>   
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="author" content="Joona Oja">
-   <link rel="stylesheet" href="./styles.css">
-   <!-- <link rel="stylesheet" href="./responsive.css"> -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-   <title>Liana Technologies - Home Page (DEMO)</title>
-</head>
-<body>
-   <div class="container">
-
-<!-- Desktop Screen Size Header element -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Joona Oja" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./responsive.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Liana Technologies - Home Page (DEMO)</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Desktop Screen Size Header element -->
       <header id="desktopHeader">
-         <div class="headerTop">
-            <ul class="headerTopContent">
-               <li>
-                  <a href="#">News</a>
-               </li>
-               <li>
-                  <a href="#">Intranet</a>
-               </li>
-               <li>
-                  <select name="languageSelector" id="language">
-                     <option value="English">In English</option>
-                     <option value="Finnish">In Finnish</option>
-                  </select>
-               </li>
-            </ul>
-         </div>
-         <nav class="headerBottom">
-            <ul class="navLeft">
-               <li><a href="#"><img src="/img/image-lianaHeader.png" alt="Liana Technologies Home Page link"></a></li>
-               <li><a href="#">Company</a></li>
-               <li><a href="#">Products</a></li>
-               <li><a href="#">Contact Us</a></li>
-            </ul>
-            <ul class="navRight">
-               <li><input type="text" placeholder="Search..."></li>
-               <li><button type="submit">Search</button></li>
-            </ul>
-         </nav>
+        <div class="headerTop">
+          <ul class="headerTopContent">
+            <li>
+              <a href="#">News</a>
+            </li>
+            <li>
+              <a href="#">Intranet</a>
+            </li>
+            <li>
+              <select name="languageSelector" id="language">
+                <option value="English">In English</option>
+                <option value="Finnish">In Finnish</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <nav class="headerBottom">
+          <ul class="navLeft">
+            <li>
+              <a href="#"
+                ><img
+                  src="/img/image-lianaHeader.png"
+                  alt="Liana Technologies Home Page link"
+              /></a>
+            </li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <ul class="navRight">
+            <li><input type="text" placeholder="Search..." /></li>
+            <li><button type="submit">Search</button></li>
+          </ul>
+        </nav>
       </header>
 
-<!-- Mobile Screen Size Header element -->
+      <!-- Mobile Screen Size Header element -->
       <header id="mobileHeader">
-         <div class="headerTopMobile">
-            <a href="">News</a>
-            <a href="">Intranet</a>
-            <select name="languageSelector" id="languageMobile">
-               <option value="English">In English</option>
-               <option value="Finnish">In Finnish</option>
-            </select>
-         </div>
-         <div class="headerBottomMobile">
-            <a href="#"><img src="/img/image-lianaHeader.png" class="mobileHeaderImage" alt="Liana Technologies Home Page link"></a>
-            <div class="dropdownMenu">
-               <button onclick="mobileMenuDropdownToggle()" class="dropbtn"><i class="fa fa-bars"></i></button>
-               <div id="dropdownButton" class="dropdownContent">
-                  <div class="searchMobile">
-                     <input type="text" placeholder="Search...">
-                     <button class="searchIconSpan">Search</button>
-                  </div>
-                  <a href="#">Company</a>
-                  <a href="#">Products</a>
-                  <a href="#">Contact Us</a>
-               </div>
-             </div>
-         </div>
+        <div class="headerTopMobile">
+          <a href="">News</a>
+          <a href="">Intranet</a>
+          <select name="languageSelector" id="languageMobile">
+            <option value="English">In English</option>
+            <option value="Finnish">In Finnish</option>
+          </select>
+        </div>
+        <div class="headerBottomMobile">
+          <a href="#"
+            ><img
+              src="/img/image-lianaHeader.png"
+              class="mobileHeaderImage"
+              alt="Liana Technologies Home Page link"
+          /></a>
+          <div class="dropdownMenu">
+            <button onclick="mobileMenuDropdownToggle()" class="dropbtn">
+              <i class="fa fa-bars"></i>
+            </button>
+            <div id="dropdownButton" class="dropdownContent">
+              <div class="searchMobile">
+                <input type="text" placeholder="Search..." />
+                <button class="searchIconSpan">Search</button>
+              </div>
+              <a href="#">Company</a>
+              <a href="#">Products</a>
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+        </div>
       </header>
 
       <main>
+        <!-- Main banner with Parallax -->
+        <section id="mainBanner" class="parallax">
+          <div class="title">
+            <h1>Software fueling digital marketing</h1>
+            <button>Learn more</button>
+          </div>
+        </section>
 
-         <!-- Main banner with Parallax -->
-         <section id="mainBanner" class="parallax">
-            <div class="title">
-                  <h1>Software fueling digital marketing </h1>
-                  <button>Learn more</button>
-            </div>
-         </section>
+        <!-- image links to pages -->
+        <section id="contentBanners">
+          <div id="companyBanner">
+            <a href="#">
+              <img
+                class="bannerImage"
+                src="/img/banner-company.jpg"
+                alt="Image link to Company page."
+              />
+              <div class="centeredText">Company</div>
+            </a>
+          </div>
+          <div id="productsBanner">
+            <a href="#">
+              <img
+                class="bannerImage"
+                src="/img/banner-products.jpg"
+                alt="Image link to Products page."
+              />
+              <div class="centeredText">Products</div>
+            </a>
+          </div>
+          <div id="contactUsBanner">
+            <a href="#">
+              <img
+                class="bannerImage"
+                src="/img/banner-contactUs.jpg"
+                alt="Image link to Contact Us page."
+              />
+              <div class="centeredText">Contact us</div>
+            </a>
+          </div>
+        </section>
 
-         <!-- TODO: finish layout -->
-
-         <!-- image links to pages -->
-         <section id="contentBanners">
-            <div id="companyBanner">
-               <a href="">
-                  <img class="bannerImage" src="/img/banner-company.jpg" alt="Image link to Company page.">
-                  <div class="centeredText">Company</div>
-               </a>
+        <!-- numbers showcase -->
+        <section id="contentNumbers">
+          <div id="clients">
+            <img class="numbersIcon" src="/img/icon-clients.png" alt="" />
+            <div class="numbersShowcase">
+              <p class="animatedNumber" data-target="3000" id="number1">0</p>
+              <p class="numberName">Clients</p>
             </div>
-            <div id="productsBanner">
-               <a href="#">
-                  <img class="bannerImage" src="/img/banner-products.jpg" alt="Image link to Products page.">
-                  <div class="centeredText">Products</div>
-               </a>
+          </div>
+          <div id="employees">
+            <img class="numbersIcon" src="/img/icon-employees.png" alt="" />
+            <div class="numbersShowcase">
+              <p class="animatedNumber" data-target="180" id="number2">0</p>
+              <p class="numberName">Employees</p>
             </div>
-            <div id="contactUsBanner">
-               <a href="#">
-                  <img class="bannerImage" src="/img/banner-contactUs.jpg" alt="Image link to Contact Us page.">
-                  <div class="centeredText">Contact us</div>
-               </a>
+          </div>
+          <div id="dailyUsers">
+            <img class="numbersIcon" src="/img/icon-dailyUsers.png" alt="" />
+            <div class="numbersShowcase">
+              <p class="animatedNumber" data-target="10000" id="number3">0</p>
+              <p class="numberName">Daily Users</p>
             </div>
-         </section>
-
-         <!-- numbers showcase -->
-         <section id="contentNumbers">
-            <div id="clients">
-               <img class="numbersIcon" src="/img/icon-clients.png" alt="">
-               <div class="numbersShowcase">
-                  <p class="animatedNumber" data-target="3000" id="number1">
-                     0
-                  </p>
-                 <p class="numberName" >Clients</p> 
-               </div>
-            </div>
-            <div id="employees">
-               <img class="numbersIcon" src="/img/icon-employees.png" alt="">
-               <div class="numbersShowcase">
-                  <p class="animatedNumber" data-target="180" id="number2">
-                     0
-                  </p>
-                  <p class="numberName" >Employees</p>   
-               </div>
-            </div>
-            <div id="dailyUsers">
-               <img class="numbersIcon" src="/img/icon-dailyUsers.png" alt="">
-               <div class="numbersShowcase">
-                  <p class="animatedNumber" data-target="10000" id="number3">
-                     0
-                  </p>
-                  <p class="numberName" >Daily Users</p>
-               </div>
-            </div>
-         </section>
+          </div>
+        </section>
       </main>
 
       <section id="latestNews">
-         <div id="newsTitle" class="subtitle">
-            <h2>Latest news</h2>
-         </div>
-         <div id="newsContent">
-            <article>
-               <p class="date">20.12.2022</p>
-               <h3>
-                  Email Marketing Tool Comparison – What to Consider and How to Choose
-               </h3>
-            </article>
-            <article>
-               <p class="date">21.12.2022</p>
-               <h3>
-                  Why Should You Use WhatsApp Together with Marketing Automation?
-               </h3>
-            </article>
-            <article>
-               <p class="date">22.12.2022</p>
-               <h3>
-                  3 Ways to Start Listening to Social Media
-               </h3>
-            </article>
-         </div>
+        <div id="newsTitle" class="subtitle">
+          <h2>Latest news</h2>
+        </div>
+        <div id="newsContent">
+          <article>
+            <p class="date">20.12.2022</p>
+            <h3>
+              Email Marketing Tool Comparison – What to Consider and How to
+              Choose
+            </h3>
+          </article>
+          <article>
+            <p class="date">21.12.2022</p>
+            <h3>
+              Why Should You Use WhatsApp Together with Marketing Automation?
+            </h3>
+          </article>
+          <article>
+            <p class="date">22.12.2022</p>
+            <h3>3 Ways to Start Listening to Social Media</h3>
+          </article>
+        </div>
       </section>
-
 
       <section id="references">
-         <div id="referencesTitle" class="subtitle">
-            <h2>References</h2>
-         </div>
-         <div id="referencesContent">
-            <div class="card" id="bosch">
-               <img class="referencesImage" src="/img/image-bosch.jpg" alt="Bosch logo">
-               <h4>Robert Bosch</h4>
-               <p>Bosch is a multinational engineering and electronics company.</p>
-            </div>
-            <div class="card" id="theBodyShop">
-               <img class="referencesImage" src="/img/image-theBodyShop.jpg" alt="The Body Shop logo">
-               <h4>The Body Shop</h4>
-               <p>The Body Shop is a global beauty brand and it has more
-                  than 3,000 stores in more than 60 countries.
-               </p>
-            </div>
-            <div class="card" id="laplandHotels">
-               <img class="referencesImage" src="/img/image-laplandHotels.jpg" alt="Lapland Hotels logo">
-               <h4>Lapland Hotels</h4>
-               <p>Lapland Hotels is the largest and most diverse Hotel
-                  chain in Lapland.
-               </p>
-            </div>
-            <div class="card" id="ikea">
-               <img class="referencesImage" src="/img/image-ikea.jpg" alt="IKEA logo">
-               <h4>IKEA</h4>
-               <p>IKEA is a multinational furniture store.</p>
-            </div>
-         </div>
+        <div id="referencesTitle" class="subtitle">
+          <h2>References</h2>
+        </div>
+        <div id="referencesContent">
+          <div class="card" id="bosch">
+            <img
+              class="referencesImage"
+              src="/img/image-bosch.jpg"
+              alt="Bosch logo"
+            />
+            <h4>Robert Bosch</h4>
+            <p>Bosch is a multinational engineering and electronics company.</p>
+          </div>
+          <div class="card" id="theBodyShop">
+            <img
+              class="referencesImage"
+              src="/img/image-theBodyShop.jpg"
+              alt="The Body Shop logo"
+            />
+            <h4>The Body Shop</h4>
+            <p>
+              The Body Shop is a global beauty brand and it has more than 3,000
+              stores in more than 60 countries.
+            </p>
+          </div>
+          <div class="card" id="laplandHotels">
+            <img
+              class="referencesImage"
+              src="/img/image-laplandHotels.jpg"
+              alt="Lapland Hotels logo"
+            />
+            <h4>Lapland Hotels</h4>
+            <p>
+              Lapland Hotels is the largest and most diverse Hotel chain in
+              Lapland.
+            </p>
+          </div>
+          <div class="card" id="ikea">
+            <img
+              class="referencesImage"
+              src="/img/image-ikea.jpg"
+              alt="IKEA logo"
+            />
+            <h4>IKEA</h4>
+            <p>IKEA is a multinational furniture store.</p>
+          </div>
+        </div>
       </section>
 
-
       <section id="newsletter">
-         <h2>Subscripe to our newsletter</h2>
-         <p id="newsletterText">
-            Follow our story and get the latest promotional
-            news about our products and events.
-         </p>
-         <div class="input">
-            <input required type="email" name="newsletterSubscription" id="Subscripe" placeholder="Your email address.">
-            <button disabled id="newsletterButton">Subscribe</button>
-         </div>
+        <h2>Subscripe to our newsletter</h2>
+        <p id="newsletterText">
+          Follow our story and get the latest promotional news about our
+          products and events.
+        </p>
+        <div class="input">
+          <input
+            required
+            type="email"
+            name="newsletterSubscription"
+            id="Subscripe"
+            placeholder="Your email address."
+          />
+          <button disabled id="newsletterButton">Subscribe</button>
+        </div>
       </section>
 
       <div id="thankYouModal" class="newsletterModal" aria-hidden="true">
-
-         <div id="modalContent" class="modalContent">
-            <span class="closeModal">&times;</span>
-            <img src="/img/image-lianaHeader.png" alt="Liana Technologies logo">
-            <h3>Thank you for subscribing to our Newsletter!</h3>
-            
-         </div>
-
+        <div id="modalContent" class="modalContent">
+          <span class="closeModal">&times;</span>
+          <img src="/img/image-lianaHeader.png" alt="Liana Technologies logo" />
+          <h3>Thank you for subscribing to our Newsletter!</h3>
+        </div>
       </div>
 
       <footer id="desktopFooter">
         <div class="footerLeftUp">
-         <h4>Liana Technologies</h4>
+          <h4>Liana Technologies</h4>
         </div>
         <div class="footerLeftDown">
-         <div class="footerLeftText">
+          <div class="footerLeftText">
             <h5>Sales and Inquiries</h5>
             <p>Email: sales@lianatech.com</p>
             <p>Phone: +358 10 387 7053</p>
-         </div>
-         <div class="footerLeftButton">
+          </div>
+          <div class="footerLeftButton">
             <button>Contact Us</button>
-         </div>
+          </div>
         </div>
         <div class="footerRightUp">
-         <ul class="footerLinks">
+          <ul class="footerLinks">
             <li><a href="">Company</a></li>
             <li><a href="">Products</a></li>
             <li><a href="">Contact us</a></li>
             <li><a href="">News</a></li>
             <li><a href="">Intranet</a></li>
-         </ul>
+          </ul>
         </div>
         <div class="footerRightDown">
-         <div class="socials">
+          <div class="socials">
             <a href="">
-               <img src="/img/icon-facebook.png" alt="Facebook link">
+              <img src="/img/icon-facebook.png" alt="Facebook link" />
             </a>
             <a href="">
-               <img src="/img/icon-twitter.png" alt="Twitter link">
+              <img src="/img/icon-twitter.png" alt="Twitter link" />
             </a>
             <a href="">
-               <img src="/img/icon-linkedIn.png" alt="LinkedIn link">
-            </a> 
-         </div>
-      </div>
+              <img src="/img/icon-linkedIn.png" alt="LinkedIn link" />
+            </a>
+          </div>
+        </div>
       </footer>
 
       <footer id="mobileFooter">
-         <div class="mobileFooterUp">
-            <h4>Liana Technologies</h4>
-            <div class="footerLeftTextMobile">
-               <h5>Sales and Inquiries</h5>
-               <p>Email: sales@lianatech.com</p>
-               <p>Phone: +358 10 387 7053</p>
-            </div>
-            <div class="mobileFooterButton">
-               <button>Contact Us</button>
-            </div>
-         </div>
-         <div class="mobileFooterDown">
-            <ul class="footerLinks">
-               <li><a href="">Company</a></li>
-               <li><a href="">Products</a></li>
-               <li><a href="">Contact us</a></li>
-               <li><a href="">News</a></li>
-               <li><a href="">Intranet</a></li>
-            </ul>
-            <div class="socials">
-               <a href="">
-                  <img src="/img/icon-facebook.png" alt="Facebook link">
-               </a>
-               <a href="">
-                  <img src="/img/icon-twitter.png" alt="Twitter link">
-               </a>
-               <a href="">
-                  <img src="/img/icon-linkedIn.png" alt="LinkedIn link">
-               </a> 
-            </div>
-         </div>
+        <div class="mobileFooterUp">
+          <h4>Liana Technologies</h4>
+          <div class="footerLeftTextMobile">
+            <h5>Sales and Inquiries</h5>
+            <p>Email: sales@lianatech.com</p>
+            <p>Phone: +358 10 387 7053</p>
+          </div>
+          <div class="mobileFooterButton">
+            <button>Contact Us</button>
+          </div>
+        </div>
+        <div class="mobileFooterDown">
+          <ul class="footerLinks">
+            <li><a href="">Company</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Intranet</a></li>
+          </ul>
+          <div class="socials">
+            <a href="">
+              <img src="/img/icon-facebook.png" alt="Facebook link" />
+            </a>
+            <a href="">
+              <img src="/img/icon-twitter.png" alt="Twitter link" />
+            </a>
+            <a href="">
+              <img src="/img/icon-linkedIn.png" alt="LinkedIn link" />
+            </a>
+          </div>
+        </div>
       </footer>
-
-   </div>
-   <script src="scripts.js"></script>
-</body>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
 </html>
