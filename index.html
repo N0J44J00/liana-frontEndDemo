@@ -208,10 +208,21 @@
             news about our products and events.
          </p>
          <div class="input">
-            <input type="email" name="newsletterSubscription" id="Subscripe" placeholder="Your email address.">
-            <button type="submit">Subscribe</button>
+            <input required type="email" name="newsletterSubscription" id="Subscripe" placeholder="Your email address.">
+            <button disabled id="newsletterButton">Subscribe</button>
          </div>
       </section>
+
+      <div id="thankYouModal" class="newsletterModal" aria-hidden="true">
+
+         <div id="modalContent" class="modalContent">
+            <span class="closeModal">&times;</span>
+            <img src="/img/image-lianaHeader.png" alt="Liana Technologies logo">
+            <h3>Thank you for subscribing to our Newsletter!</h3>
+            
+         </div>
+
+      </div>
 
       <footer id="desktopFooter">
         <div class="footerLeftUp">
