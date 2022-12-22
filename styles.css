@@ -473,6 +473,7 @@ section {
    margin: auto;
 }
 
+
 #newsContent{
    display: flex;
    flex-direction: row;
@@ -482,16 +483,28 @@ section {
    margin: auto;
 }
 
-#newsContent div {
-   display: flex;
+#newsContent article {
+   display: block;
    width: 100%;
-   height: 100%;
-   align-self: stretch;
-   align-items: center;
-   background-color: aquamarine;
-
-   border: black 1px solid;
+   height: 70%;
+   /* align-self: stretch; */
+   /* align-items: center; */
+   background-color: white;
+   margin: 1em;
+   border-radius: 5px;
 }
+
+.date {
+   font-size: .8em;
+   margin: 1em;
+}
+
+h3 {
+   margin: 1em;
+   margin-top: 0;
+   font-size: 1.2rem;
+}
+
 #references {
    grid-area: references;
    display: grid;
@@ -617,7 +630,7 @@ footer {
 
    .container {
    grid-template-columns: 1fr;
-   grid-template-rows: 100px 240vh 60vh 150vh 60vh 30vh;
+   grid-template-rows: 100px 240vh 100vh 150vh 60vh 30vh;
    }
 
    main {
@@ -688,6 +701,14 @@ footer {
       padding: 0;
    }
 
+   #newsContent article {
+      height: 40%;
+      margin: 0;
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+   }
+
    #referencesContent div {
       background-color: yellow;
       border: black 1px solid;
@@ -697,7 +718,7 @@ footer {
 /* Mobile Layout, Landscape */
 @media only screen and (max-width: 1110px) and ( min-width: 950px) {
    .animatedNumber {
-      font-size: 1rem !important;
+      font-size: 2.3rem !important;
       font-weight: 300;
       margin-top: 2rem;
    
@@ -727,8 +748,8 @@ footer {
    #contentNumbers {
       display: flex;
       align-items: stretch;
-      width: 90%;
-      height: 90%;
+      width: 80%;
+      height: 80%;
       margin: auto;
    }
 
@@ -751,6 +772,16 @@ footer {
       font-weight: 300;
       margin-top: 2rem;
    
+   }
+
+   .date {
+      margin-bottom: .2em;
+   }
+
+   h3 {
+      margin: .5em;
+      margin-top: 0;
+      font-size: .8em;
    }
 
    #referencesContent div {
@@ -816,6 +847,12 @@ footer {
       flex-wrap: wrap;
       margin: auto;
 
+   }
+
+   h3 {
+      margin: 1em;
+      margin-top: 0;
+      font-size: 1rem;
    }
 
    #referencesContent div {
