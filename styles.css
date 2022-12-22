@@ -926,8 +926,7 @@ button:disabled {
 }
 
 /* MOBILE LAYOUT LANDSCAPE */
-@media only screen and (max-width: 940px) and (orientation: landscape) {
-
+@media only screen and (max-width: 955px) and (orientation: landscape) {
    .container{
       grid-template-columns: 1fr;
       grid-template-rows: 100px 200vh 100vh 200vh 80vh 80vh;
@@ -1102,6 +1101,7 @@ button:disabled {
 
 /* SMALLER DESKTOP/TABLET WINDOW */
 @media only screen and (max-width: 1110px) and ( min-width: 950px) {
+
    .animatedNumber {
       font-size: 2.3rem !important;
       font-weight: 300;
@@ -1133,6 +1133,7 @@ button:disabled {
 
    .card { height: 90%; }
 }
+
 /* Quick and dirty fix for footer links */
 @media only screen and (max-width: 1280px) {
    .footerRightUp ul li {
