@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
-/* ------------------ BASE CSS ------------------ */
+/* ------------------ BASE ELEMENTS CSS ------------------ */
 
 * {
    margin: 0;
@@ -80,18 +80,6 @@ header {
    background-color: #4c8930;
 }
 
-main {
-   grid-area: main;
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 420px 1fr 1fr;
-   grid-template-areas: 
-   "mainBanner"
-   "contentBanners"
-   "contentNumbers"
-   ;
-}
-
 section {
    display: flex;
    align-items: stretch;
@@ -111,124 +99,7 @@ footer {
    width: 100%;
 }
 
-.footerLeftUp {
-   position: absolute;
-   top: 0;
-   left: 10%;
- width: 40%;
- height: 40%;
- text-align: left;
-}
-
-.footerLeftUp h4 {
-   margin-bottom: 4rem;
-   margin-left: 0;
-margin-top: 3rem;
-}
-
-.footerLeftDown {
-   display: flex;
-   position: absolute;
-   bottom: 0;
-   left: 10%;
-   width: 40%;
-   height: 60%;
-   text-align: left;
-}
-
-.footerLeftDown h5 {
-   font-size: 1.2rem;
-}
-
-.footerLeftDown p {
-   font-size: .9em;
-   margin: 2px;
-}
-
-.footerLeftButton {
-   margin: 1.5rem;
-   margin-left: 3rem;
-}
-
-.footerRightUp {
-   position: absolute;
-   top: 0;
-   right: 10%;
-   width: 40%;
-   height: 50%;
-   text-align: right;
-}
-
-.footerRightUp ul {
-   display: inline;
-}
-
-.footerRightUp ul li {
-   display: inline-block;
-   margin: 1.5rem;
-   margin-top: 3rem;
-   margin-right: 0;
-}
-
-.footerRightUp a {
-   color: white;
-   text-decoration: none;
-}
-
-.footerRightDown {
-   position: absolute;
-   bottom: 0;
-   right: 10%;
-   width: 40%;
-   height: 50%;
-   text-align: right;
-}
-
-/* MOBILE FOOTER */
-
-#mobileFooter {
-   grid-area: footer;
-   flex-direction: row;
-   text-align: center;
-   width: 100%;
-}
-
-.footerLeftTextMobile h5 {
-   font-size: 1.2em;
-   margin: 1em;
-}
-
-.mobileFooterUp {
-   margin: 1em;
-   width: 90%;
-
-}
-
-.mobileFooterDown {
-   margin: 1em;
-   width: 90%;
-}
-
-.mobileFooterDown  a {
-   color: white;
-}
-.mobileFooterDown li {
-   margin: 8px;
-}
-
-.socials {
-   margin: 10px;
-}
-
-.footerLinks {
-   margin: 1em;
-}
-
-.footerLinks ul li {
-   margin: 5px;
-}
-
-
+/* ------------------ GRID LAYOUT------------------ */
 
 .container {
    background-color: white;
@@ -246,6 +117,20 @@ margin-top: 3rem;
    "footer";
 }
 
+main {
+   grid-area: main;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 420px 1fr 1fr;
+   grid-template-areas: 
+   "mainBanner"
+   "contentBanners"
+   "contentNumbers"
+   ;
+}
+
+/* ------------------ HEADER & NAVIGATION FOR DESKTOP ------------------ */
+
 .headerTop {
    margin-right: 10%;
 }
@@ -255,8 +140,6 @@ margin-top: 3rem;
    width: 100%;
   display: table-row;
   text-align: right;
-  /* list-style-type: none; */
-
 }
 
 .headerTopContent li {
@@ -320,8 +203,6 @@ margin-top: 3rem;
    display: table-cell;
    vertical-align: middle;
    padding: 0;
-
-   /* list-style-type: none; */
    line-height: 1em;
    white-space: nowrap;
    overflow: hidden;
@@ -340,7 +221,7 @@ margin-top: 3rem;
    color: gray;
 }
 
-/* MOBILE NAVIGATION */
+/* ------------------ HEADER & NAVIGATION FOR MOBILE ------------------ */
 
 .headerTopMobile {
    height: 40px;
@@ -439,7 +320,6 @@ margin-top: 3rem;
  .searchMobile {
    display: block;
    justify-content: center;
-   /* list-style: none; */
    text-align: center;
    width: 100vw;
  }
@@ -456,7 +336,6 @@ margin-top: 3rem;
    display: inline-block;
    background-color: white;
    color: #5ea83c;
-   /* pointer-events: none; */
    padding: 10px !important; 
    margin: auto;
    text-align: center;
@@ -478,6 +357,130 @@ margin-top: 3rem;
  
  .show {display: block;}
 
+/* ------------------ DESKTOP FOOTER------------------ */
+
+.footerLeftUp {
+   position: absolute;
+   top: 0;
+   left: 10%;
+ width: 40%;
+ height: 40%;
+ text-align: left;
+}
+
+.footerLeftUp h4 {
+   margin-bottom: 4rem;
+   margin-left: 0;
+margin-top: 3rem;
+}
+
+.footerLeftDown {
+   display: flex;
+   position: absolute;
+   bottom: 0;
+   left: 10%;
+   width: 40%;
+   height: 60%;
+   text-align: left;
+}
+
+.footerLeftDown h5 {
+   font-size: 1.2rem;
+}
+
+.footerLeftDown p {
+   font-size: .9em;
+   margin: 2px;
+}
+
+.footerLeftButton {
+   margin: 1.5rem;
+   margin-left: 3rem;
+}
+
+.footerRightUp {
+   position: absolute;
+   top: 0;
+   right: 10%;
+   width: 40%;
+   height: 50%;
+   text-align: right;
+}
+
+.footerRightUp ul {
+   display: inline;
+}
+
+.footerRightUp ul li {
+   display: inline-block;
+   margin: 1.5rem;
+   margin-top: 3rem;
+   margin-right: 0;
+}
+
+.footerRightUp a {
+   color: white;
+   text-decoration: none;
+}
+
+.footerRightDown {
+   position: absolute;
+   bottom: 0;
+   right: 10%;
+   width: 40%;
+   height: 50%;
+   text-align: right;
+}
+
+/* ------------------ MOBILE FOOTER------------------ */
+
+#mobileFooter {
+   grid-area: footer;
+   flex-direction: row;
+   text-align: center;
+   width: 100%;
+}
+
+.footerLeftTextMobile h5 {
+   font-size: 1.2em;
+   margin: 1em;
+}
+
+.mobileFooterUp {
+   margin: 1em;
+   width: 100%;
+}
+
+.mobileFooterButton {
+   margin: 1em;
+}
+
+.mobileFooterDown {
+   margin: 1em;
+   width: 90%;
+}
+
+.mobileFooterDown  a {
+   color: white;
+}
+.mobileFooterDown li {
+   margin: 8px;
+}
+
+.socials {
+   margin: 10px;
+}
+
+.footerLinks {
+   margin: 1em;
+}
+
+.footerLinks ul li {
+   margin: 5px;
+}
+
+/* ------------------ PARALLAX BANNER ------------------ */
+
 .bannerImage {
    margin-top: 1.2em;
   width: 100%;
@@ -495,6 +498,15 @@ margin-top: 3rem;
    font-weight: 600;
    font-size: 1.4rem;
    color: white;
+}
+
+.parallax {
+   position: relative;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-image: url(/img/banner-main.jpg);
+   background-size: 1400px auto;
+   background-position: center top;
 }
 
 #contentNumbers {
@@ -518,6 +530,8 @@ margin-top: 3rem;
 .title button {
    margin-top: 1em;
 }
+
+/* ------------------ MAIN CONTENT ------------------ */
 
 #companyBanner {
    position: relative;
@@ -590,6 +604,8 @@ margin-top: 3rem;
 
 }
 
+/* ------------------ LATEST NEWS SECTION ------------------ */
+
 #latestNews {
    grid-area: latestNews;
    display: grid;
@@ -631,6 +647,8 @@ margin-top: 3rem;
    font-size: .8em;
    margin: 1em;
 }
+
+/* ------------------ REFERENCES SECTION ------------------ */
 
 #references {
    grid-area: references;
@@ -683,6 +701,8 @@ margin-top: 3rem;
    border-bottom: lightgrey 1px solid;
 }
 
+/* ------------------ NEWSLETTER SECTION ------------------ */
+
 #newsletter {
    background-color: white;
    grid-area: newsletter;
@@ -725,11 +745,12 @@ button:disabled {
 
 .modalContent {
    background-color: white;
-   margin: 25% auto;
+   margin: 20% auto;
    padding: 20px;
    border: 1px solid lightgrey;
    border-radius: 10px;
    width: 60%;
+   max-width: 500px;
    text-align: center;
    box-shadow: 1px 0 10px 2px rgba(48, 90, 35, 0.4);
 }
@@ -747,6 +768,10 @@ button:disabled {
    width: 40%;
    height: auto;
    margin: auto;
+}
+
+.modalContent h3 {
+   margin-top: 2em;
 }
 
 .closeModal {
@@ -783,15 +808,6 @@ button:disabled {
    text-align: center;
 }
 
-.parallax {
-   position: relative;
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-image: url(/img/banner-main.jpg);
-   background-size: 1400px auto;
-   background-position: center top;
-}
-
 .title {
    position: absolute;
    left: 0%;
@@ -802,16 +818,15 @@ button:disabled {
    color: white;
 }
 
-
 /* ----------------- MEDIA QUERIES ------------------ */
 
 
 /* MOBILE LAYOUT: PORTRAIT */
-@media only screen and (max-width: 549px) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
 
    .container {
    grid-template-columns: 1fr;
-   grid-template-rows: 100px 240vh 100vh 190vh 60vh 70vh;
+   grid-template-rows: 100px 240vh 100vh 190vh 60vh 80vh;
    }
 
    main {
@@ -909,7 +924,183 @@ button:disabled {
    }
 
 }
-/* MOBILE LAYOUT: LANDSCAPE */
+
+/* MOBILE LAYOUT LANDSCAPE */
+@media only screen and (max-width: 940px) and (orientation: landscape) {
+
+   .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 200vh 100vh 200vh 80vh 80vh;
+      grid-template-areas: 
+      "header"
+      "main"
+      "latestNews"
+      "references"
+      "newsletter"
+      "footer";
+   }
+
+   main {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 70vh 1fr 1fr;
+      grid-template-areas: 
+      "mainBanner"
+      "contentBanners"
+      "contentNumbers";
+      }
+
+      h2 {
+         margin-bottom: 0;
+         margin-top: 0;
+      }
+
+      h3 { font-size: 1em; }
+
+      section { width: 100% !important; }
+      
+      #contentNumbers, #contentBanners {
+         display: flex;
+         align-items: stretch;
+         width: 90%;
+         height: 100%;
+         margin: auto;
+      }
+
+      .title h1 { font-size: 2rem; }
+
+      #contentNumbers {
+         display: flex;
+         align-items: stretch;
+         width: 80%;
+         height: 80%;
+         margin: auto;
+      }
+
+      .animatedNumber { font-size: 2rem; }
+
+      .numberName {
+         text-align: left;
+         margin-left: 0;
+         font-size: 1rem;
+      }
+
+      #newsContent { width: 100%; }
+
+      #newsContent article { height: 80%; }
+
+      #references { grid-template-rows: 80px 1fr; }
+
+      #referencesContent {
+         display: flex;
+         width: 100%;
+         flex-wrap: wrap;
+         margin: auto;
+         flex-direction: row;
+      }
+
+      #referencesContent div {
+         flex:0 0 40%;
+         width: 20%;
+         flex-wrap: wrap;
+         height: 50%;
+         margin: auto;
+         margin-bottom: 1em;
+         margin-top: 0;
+         background-color: white;
+         border: lightgrey 1px solid;
+      }
+
+      #mobileFooter { flex-direction: row; }
+
+      .mobileFooterUp, .mobileFooterDown {
+         width: 50%;
+         margin: 0;
+         margin-top: 2em;
+      }
+}
+
+/* TABLET LAYOUT PORTRAIT */ 
+@media only screen and (max-width: 950px) and (min-width: 601px) and (orientation: portrait) {
+
+   .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 90vh 40vh 90vh 50vh 40vh;
+      grid-template-areas: 
+      "header"
+      "main"
+      "latestNews"
+      "references"
+      "newsletter"
+      "footer";
+   }
+
+   main {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50vh 1fr 1fr;
+      grid-template-areas: 
+      "mainBanner"
+      "contentBanners"
+      "contentNumbers";
+      }
+
+   #contentNumbers, #contentBanners {
+      display: flex;
+      align-items: stretch;
+      width: 90%;
+      height: 100%;
+      margin: auto;
+   }
+
+      .animatedNumber {
+         text-align: left;
+         margin-left: 0;
+         font-size: 1.5em;
+      }
+
+      .numberName { font-size: .5em; }
+
+      #references { grid-template-rows: 80px 1fr; }
+
+      #referencesContent {
+         display: flex;
+         width: 100%;
+         flex-wrap: wrap;
+         margin: auto;
+         flex-direction: row;
+      }
+
+      #referencesContent div {
+         flex:0 0 40%;
+         width: 20%;
+         flex-wrap: wrap;
+         height: 50%;
+         margin: auto;
+         margin-bottom: 1em;
+         margin-top: 0;
+         background-color: white;
+         border: lightgrey 1px solid;
+      }
+
+      h3 {
+         margin: .5em;
+         margin-top: 0;
+         font-size: .8em;
+      }
+
+      #mobileFooter {  flex-direction: row; }
+
+      .mobileFooterUp, .mobileFooterDown {
+         width: 50%;
+         margin: 0;
+         margin-top: 2em;
+      }
+}
+
+/* SMALLER DESKTOP/TABLET WINDOW */
 @media only screen and (max-width: 1110px) and ( min-width: 950px) {
    .animatedNumber {
       font-size: 2.3rem !important;
@@ -933,193 +1124,14 @@ button:disabled {
    }
 }
 
-/* TABLET LANDSCAPE */
-
-@media only screen and (max-width: 954px) and (min-width: 550px) and (orientation: landscape) {
-   .container{
-      grid-template-columns: 1fr;
-      grid-template-rows: 100px 200vh 80vh 130vh 90vh 80vh;
-      grid-template-areas: 
-      "header"
-      "main"
-      "latestNews"
-      "references"
-      "newsletter"
-      "footer";
-      
-   }
-
-   #mobileFooter {
-      flex-direction: column;
-   }
-
-   .mobileFooterUp, .mobileFooterDown {
-      width: 50%;
-   }
-
-   #contentNumbers {
-      display: flex;
-      align-items: stretch;
-      width: 80%;
-      height: 80%;
-      margin: auto;
-   }
-
-   .numbersIcon {
-      float: left;
-      margin: 2em;
-      margin-right: 0;
-      margin-left: 1em;
-      scale: 50%;
-   }
-   
-   .numbersShowcase p {
-      text-align: left;
-      margin-left: 0;
-      font-size: 1rem;
-   }
-   
-   .animatedNumber {
-      font-size: 2rem !important;
-      font-weight: 300;
-      margin-top: 2rem;
-   
-   }
-
-   .date {
-      margin-bottom: .2em;
-   }
-
-   h3 {
-      margin: .5em;
-      margin-top: 0;
-      font-size: .8em;
-   }
-
-   #referencesContent {
-      width: 100%;
-   }
-
-   #referencesContent div {
-      /* background-color: pink; */
-      border: lightgrey 1px solid;
-      height: 90%;
-   }
-
-   .modalContent {
-      margin: 15% auto;
-      width: 80%;
-      height: 40%;
-   }
-
-   h4 {
-      font-size: 1em;
-   }
-
-   .card p {
-      font-size: .7em;
-   }
-}
-
-
-   /* TABLETS */
-@media only screen and (max-width: 954px) and (min-width: 550px) and (min-height: 600px) {
-
-   .container{
-      grid-template-columns: 1fr;
-      grid-template-rows: 100px 100vh 30vh 80vh 30vh 40vh;
-      grid-template-areas: 
-      "header"
-      "main"
-      "latestNews"
-      "references"
-      "newsletter"
-      "footer";
-      
-   }
-   #mobileFooter {
-      flex-direction: row;
-   }
-
-   .mobileFooterUp, .mobileFooterDown {
-      width: 50%;
-      margin: 0;
-      margin-top: 2em;
-   }
-   
-
-   main {
-      grid-area: main;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 50vh 1fr .5fr;
-      grid-template-areas: 
-      "mainBanner"
-      "contentBanners"
-      "contentNumbers";
-      }
-   
-      section {
-         width: 100%;
-      }
-   
-      #contentBanners,
-      #contentNumbers,
-      #newsContent,
-      #referencesContent {
-         flex-direction: row;
-         width: 90%;
-      }
-
-      .animatedNumber {
-         font-size: 2rem !important;
-         font-weight: 300;
-         margin-top: 2rem;
-      
-      }
-
-   #references {
-      padding-bottom: 20px;
-   }
-   
-   #referencesContent {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      margin: auto;
-
-   }
-
-   h3 {
-      margin: 1em;
-      margin-top: 0;
-      font-size: 1rem;
-   }
-
-   #referencesContent div {
-      flex:0 0 45%;
-      width: 50%;
-      height: 45%;
-      margin: 1em;
-      background-color: white;
-      border: lightgrey 1px solid;
-   }
-}
-
-
-/* Desktop Layout, Larger Screens */
+/* DESKTOP OVER MAX WIDTH */
 @media only screen and (min-width: 1400px) {
-
-
    .parallax {
       background-size: 1400px auto;
       background-position: center top;
    }
 
-   .card {
-      height: 90%;
-   }
-
+   .card { height: 90%; }
 }
 /* Quick and dirty fix for footer links */
 @media only screen and (max-width: 1280px) {
@@ -1135,42 +1147,26 @@ button:disabled {
 
 /* MEDIA QUERIES TO CHANGE BETWEEN HEADER NAV ELEMENTS */
 @media only screen and (max-width: 954px) {
-   #mobileHeader {
-      display: inline;
-   }
+   #mobileHeader { display: inline; }
 
-   #desktopHeader {
-      display: none;
-   }
+   #desktopHeader { display: none; }
 }
 
 @media only screen and (min-width: 955px) {
-   #mobileHeader {
-      display: none;
-   }
+   #mobileHeader { display: none; }
 
-   #desktopHeader {
-      display: inline;
-   }
+   #desktopHeader { display: inline; }
 }
 
 /* MEDIA QUERIES TO CHANGE BETWEEN FOOTER ELEMENTS */
 @media only screen and (max-width:909px) {
-   #mobileFooter {
-      display: flex;
-   }
+   #mobileFooter { display: flex; }
 
-   #desktopFooter {
-      display: none;
-   }
+   #desktopFooter { display: none; }
 }
 
 @media only screen and (min-width:910px) {
-   #mobileFooter {
-      display: none;
-   }
+   #mobileFooter { display: none; }
 
-   #desktopFooter {
-      display: flex;
-   }
+   #desktopFooter { display: flex; }
 }
